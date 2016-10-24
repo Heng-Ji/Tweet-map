@@ -11,7 +11,7 @@ from thread import *
 
 #fetching data from elasticsearch backend, parsing the data into json format
 def coordinate(word):
-    r = requests.get("http://search-ccbigdata-vflc3fpahmprze34myukffb7fq.us-west-2.es.amazonaws.com/twitter/_search?q=" + word + "&size=1000")
+    r = requests.get("" + word + "&size=1000")
     output_coord = []
     dic = json.loads(json.dumps(r.json()))
     length = len(dic["hits"]["hits"])
